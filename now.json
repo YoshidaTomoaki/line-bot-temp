@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "scrap",
+  "builds": [{ "src": "lineNotice.js", "use": "@now/node" }],
+  "routes": [
+      { "src": "/", "dest": "lineNotice.js" },
+      { "src": "/webhook", "dest": "lineNotice.js" }
+  ],
+  "env":{
+    "CHANNEL_ACCESS_TOKEN": "@line-token",
+    "CHANNEL_SECRET": "@line-secret"
+  }
+}
